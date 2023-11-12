@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// More information about the schema configuration options is available at:
+// https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference
+
+datasource db {
+  provider = "postgresql" // or another supported provider
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  END_USER
+  CORPORATE_ADMIN
+  SUPER_ADMIN
+}
+
+enum Permission {
+  READ
+  WRITE
+  DELETE
+}
+
+model User {
+  id           Int         @id @default(autoincrement())
+  email        String      @unique
+  password     String
+  name         String?
+  role         Role        @default(END_USER)
+  permissions  Permission[]
+  corporateId  Int?
+  Corporate    Corporate?  @relation(fields: [corporateId], references: [id])
+  Projects     Project[]
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+}
+
+model Corporate {
+  id        Int       @id @default(autoincrement())
+  name      String    @unique
+  domain    String    @unique
+  Users     User[]
+  Projects  Project[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Project {
+  id          Int       @id @default(autoincrement())
+  name        String
+  description String?
+  corporateId Int
+  Corporate   Corporate @relation(fields: [corporateId], references: [id])
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
