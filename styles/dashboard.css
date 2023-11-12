@@ -1,0 +1,86 @@
+/* Dashboard Layout */
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f7fa;
+  padding: 20px;
+}
+
+/* Dashboard Navigation */
+.dashboardNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Dashboard Content */
+.dashboardContent {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard Tables */
+.userListTable,
+.projectListTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.userListTable th,
+.projectListTable th,
+.userListTable td,
+.projectListTable td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+/* Dashboard Forms */
+.settingsForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.settingsForm label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.settingsForm input,
+.settingsForm select,
+.settingsForm textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5da;
+  border-radius: 4px;
+}
+
+.settingsForm button {
+  padding: 10px 15px;
+  background-color: #0052cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.settingsForm button:hover {
+  background-color: #003d99;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboardNav,
+  .dashboardContent {
+    padding: 10px;
+  }
+}

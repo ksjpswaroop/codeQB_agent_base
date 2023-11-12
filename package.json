@@ -1,0 +1,29 @@
+{
+  "name": "nextjs-modern-web-app",
+  "version": "1.0.0",
+  "description": "A modern web application using the Next.js framework with multi-tenant architecture and code assistance tools.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "next-auth": "^4.0.0",
+    "typescript": "^4.0.0",
+    "prisma": "^3.0.0",
+    "@prisma/client": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/node": "^16.0.0",
+    "eslint": "8.x",
+    "eslint-config-next": "12.x"
+  },
+  "license": "MIT",
+  "private": true
+}

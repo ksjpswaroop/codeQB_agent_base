@@ -1,0 +1,186 @@
+/* styles/globals.css */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Layout Components */
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer img {
+  margin-left: 0.5rem;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dashboard Styles */
+.dashboardContainer {
+  background-color: #f0f2f5;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.userListTable,
+.projectListTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.userListTable th,
+.userListTable td,
+.projectListTable th,
+.projectListTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.userListTable th,
+.projectListTable th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Auth Forms */
+#signUpForm,
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#signUpForm input,
+#loginForm input {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#signUpForm button,
+#loginForm button {
+  background-color: #0070f3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#signUpForm button:hover,
+#loginForm button:hover {
+  background-color: #0056b3;
+}
+
+/* Settings Form */
+#settingsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#settingsForm input,
+#settingsForm select {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#settingsForm button {
+  background-color: #0070f3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#settingsForm button:hover {
+  background-color: #0056b3;
+}
+
+/* Tool Components */
+.toolsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.toolCard {
+  padding: 20px;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.toolCard:hover,
+.toolCard:focus,
+.toolCard:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.toolCard h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.toolCard p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
